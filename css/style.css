@@ -10,7 +10,9 @@
 .btGroup    {position: absolute; bottom: 10%; width: 100%;}
 .btGroup button     {min-height: 45px;}
 .login      {text-align: center; margin-bottom: 4%;}
-.login button   {width: 80%; height: 7%; margin: 0 auto; background: #fff; color: #2196f3; border-radius: 5px; font-weight: bold;}
+.login button   {width: 80%; height: 7%; margin: 0 auto; background: #fff; border-radius: 5px; font-weight: bold;}
+
+.login button a {text-decoration: none; color: #2196f3;}
 
 .register       {text-align: center;}
 .register button {width: 80%; height: 7%; margin: 0 auto; background-color: rgba(255,255,255,0); color: #fff; border: 1px solid #fff; border-radius: 5px; font-weight: bold;}
