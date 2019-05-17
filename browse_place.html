@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <link href="css/common.css" type="text/css"/ rel="stylesheet">
+        <link href="css/style.css" type="text/css"/ rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><title>Browse place</title>
+    </head>
+    <body>
+         <nav class="navi">
+            <div class="left">
+                <li>
+                    <a href="#"><img src="img/arrow.png"></a>
+                </li>
+            </div>
+            <div class="title">Browse Restaurant</div>
+        </nav>
+            <div class="brWrap">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/food1.png">
+                            <p>Gramercy Tavern</p>
+                            <span class="adr">42 E 20th St</span>
+                            <span class="like">228</span>
+                            <i><img src="img/ar_right.png"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/place_info.html">
+                            <img src="img/food2.png">
+                            <p>Blue Hill</p>
+                            <span class="adr">75 Washington Pl</span>
+                            <span class="like">215</span>
+                            <i><img src="img/ar_right.png"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/food3.png">
+                            <p>Le Bernardin</p>
+                            <span class="adr">155 W 51st St</span>
+                            <span class="like">199</span>
+                            <i><img src="img/ar_right.png"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/food4.png">
+                            <p>Jean-Georges</p>
+                            <span class="adr">1 Central Park West</span>
+                            <span class="like">183</span>
+                            <i><img src="img/ar_right.png"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/food5.png">
+                            <p>The Four Seasons</p>
+                            <span class="adr">99 E 52nd St</span>
+                            <span class="like">178</span>
+                            <i><img src="img/ar_right.png"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/food6.png">
+                            <p>Ninja New York</p>
+                            <span class="adr">25 Hudson St</span>
+                            <span class="like">78</span>
+                            <i><img src="img/ar_right.png"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/food7.png">
+                            <p>Estiatorio Milos</p>
+                            <span class="adr">42 E 20th St</span>
+                            <span class="like">228</span>
+                            <i><img src="img/ar_right.png"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="botMenu">
+                <ul>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/location.html">
+                            <img src="img/earth_off.png"><span>Location</span></a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/categories.html">
+                            <img src="img/menu_on.png"><span>Browse</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/favorite.html"><img src="img/heart_off.png"><span>Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/profile.html"><img src="img/profile_off.png"><span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                $('.botMenu>ul>li').on('click', function(){
+                   $(this).find('img').attr('src',function(index, attr){
+                       if(attr.match('_on')){
+                           return attr.replace('_on.png','_off.png');
+                       }else{
+                           return attr.replace('_off.png','_on.png');
+                       }
+                   })
+                });
+            </script>
+    </body>
+</html>

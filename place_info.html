@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <link href="css/common.css" type="text/css"/ rel="stylesheet">
+        <link href="css/style.css" type="text/css"/ rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+        <script src="http://kenwheeler.github.io/slick/slick/slick.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Place info</title>        
+    </head>
+    <body>
+         <nav class="navi">
+            <div class="left">
+                <li>
+                    <a href="#"><img src="img/arrow.png"></a>
+                </li>
+            </div>
+            <div class="right">
+                <li>
+                    <a href="#"><img src="img/like_w.png"></a>
+                </li>
+            </div>
+            <div class="title">Blue Hill</div>
+        </nav>
+            <div class="infoWrap">
+                <div class="main">
+                    <p>Blue Hill</p>
+                    <span>75 Washington Pl</span>
+                    <span>5 PM - 11 PM</span>
+                    <span>215</span>
+                </div>
+                <div class="content">
+                    The original Blue Hill restaurant, opened in 2000, is located in Greenwich Village, New York City. Hidden three steps below street level, the restaurant occupies a landmark "speakeasy" just off of Washington Square Park.
+                </div>
+                <div class="contact">
+                    <span>+1 212 535 1666</span>
+                    <span>contact@bluehill.com</span>
+                </div>
+                <div class="map" id="map"></div>
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c4ee29ba9f75c7b2afe66c6e98834a8a"></script>
+                <script>
+                    var container = document.getElementById('map'),
+                        options = { 
+                            center: new daum.maps.LatLng(33.450701, 126.570667), 
+                            level: 3 
+                        };
+                    var map = new daum.maps.Map(container, options); 
+                    function setDraggable(draggable){
+                        map.setDraggable(false);
+                    }
+                </script>
+
+            </div>
+            <div class="botMenu">
+                <ul>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/location.html">
+                        <img src="img/earth_off.png"><span>Location</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/categories.html">
+                        <img src="img/menu_on.png"><span>Browse</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/favorite.html">
+                            <img src="img/heart_off.png"><span>Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/profile.html">
+                            <img src="img/profile_off.png"><span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                $('.botMenu>ul>li').on('click', function(){
+                   $(this).find('img').attr('src',function(index, attr){
+                       if(attr.match('_on')){
+                           return attr.replace('_on.png','_off.png');
+                       }else{
+                           return attr.replace('_off.png','_on.png');
+                       }
+                   })
+                });
+            </script>
+    </body>
+</html>

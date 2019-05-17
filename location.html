@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <link href="css/common.css" type="text/css"/ rel="stylesheet">
+        <link href="css/style.css" type="text/css"/ rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+        <script src="http://kenwheeler.github.io/slick/slick/slick.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><title>Location</title>
+    </head>
+    <body>
+        <nav class="navi">
+            <div class="left">
+                <li>
+                    <a href="#"><img src="img/arrow.png"></a>
+                </li>
+            </div>
+            <div class="right">
+                <li>
+                    <a href="#"><img src="img/magnify.png"></a>
+                </li>
+            </div>
+            <div class="title">Location</div>
+        </nav>
+            <div class="loWrap">
+                <div class="slick">
+                    <div><img src="img/ny1.jpg"/></div>
+                    <div><img src="img/ny2.jpg"/></div>
+                    <div><img src="img/ny3.jpg"/></div>
+                    <div><img src="img/ny4.jpg"/></div>
+                </div>
+                <script>
+                    $('.slick').slick({
+                        autoplay: false,
+                        infinite: true,
+                        speed: 500,
+                        fade: true,
+                        arrows: false,
+                        dots: true,
+                        slideToShow: 1,
+                        slideToScroll: 1,
+                    });
+                </script>
+                <span>New York City</span>
+                <p>Located at the southern tip of the State of New York, the city is the center of the New York metropolitan area, one of the most populous urban agglomerations in the world.</p>
+                <button>Choose</button>
+            </div>
+            <div class="botMenu">
+                <ul>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/location.html">
+                        <img src="img/earth_on.png"><span>Location</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/categories.html">
+                        <img src="img/menu_off.png"><span>Browse</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/favorite.html">
+                            <img src="img/heart_off.png"><span>Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bori0327.ivyro.net/cityguide/profile.html">
+                            <img src="img/profile_off.png"><span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                $('.botMenu>ul>li').on('click', function(){
+                   $(this).find('img').attr('src',function(index, attr){
+                       if(attr.match('_on')){
+                           return attr.replace('_on.png','_off.png');
+                       }else{
+                           return attr.replace('_off.png','_on.png');
+                       }
+                   })
+                });
+            </script>
+    </body>
+</html>
